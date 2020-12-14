@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
+
+* {
+    font-family: 'Fira Sans', sans-serif;
+    background: #100c1c;
+    margin: 0;
+    padding: 0;
+}
