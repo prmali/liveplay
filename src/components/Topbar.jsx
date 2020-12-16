@@ -12,6 +12,7 @@ const Wrapper = styled.div`
         padding: 15px;
     }
     filter: drop-shadow(0 0 0.75rem #06040B);
+    margin-bottom: 40px;
 `;
 
 const Right = styled.a`

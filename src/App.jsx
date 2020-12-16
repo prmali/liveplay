@@ -25,7 +25,7 @@ function App() {
 			<Topbar />
             <Router>
                 <Switch>
-                    <Route path="/" component={Home}/>
+                    <Route exact path="/" component={Home}/>
                     <Route path="/test" component={Testing}/>
                     <Route path="/profile" component={Profile}/>
                     <Route path="/rooms/:id" component={Room}/>

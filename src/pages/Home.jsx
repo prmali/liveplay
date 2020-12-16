@@ -8,7 +8,6 @@ import { authorize } from "../redux/actions/root.action";
 const cookies = new Cookies();
 
 const Wrapper = styled.div`
-    margin-top: 40px;
     padding: 0 50px;
     text-align: center;
 `;
@@ -143,7 +142,7 @@ const Home = () => {
     const refreshToken = cookies.get("refresh_token");
 
     useEffect(() => {
-        if (!userObj) {
+        if (!accessToken) {
             axios.get("https://api.spotify.com/v1/me", { 
                 "headers": { "Authorization": "Bearer " + accessToken } 
             }).then(res => {
