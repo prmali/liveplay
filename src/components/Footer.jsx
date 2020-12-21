@@ -65,43 +65,44 @@ const Donate = styled.a`
     background: -webkit-linear-gradient(20deg, #fc604d 0%, #f23180 50%, #c229b1 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-decoration: none;
 `;
 
 function Footer(props) {
     return(
-        <>
-        <Wrapper>
-            <Column>
-                <Heading>Diggin' Liveplay?</Heading>
-                <Subheading>I can barely keep the servers up. I'd appreciate any bit of help ❤️</Subheading>
-                <SpecialContainer>
-                    <Donate href="">Donate</Donate>
-                </SpecialContainer>
-            </Column>
+        <div>
+            <Wrapper>
+                <Column>
+                    <Heading>Diggin' Liveplay?</Heading>
+                    <Subheading>I can barely keep the servers up. I'd appreciate any bit of help ❤️</Subheading>
+                    <SpecialContainer>
+                        <Donate href="">Donate</Donate>
+                    </SpecialContainer>
+                </Column>
 
-            <Column>
-                <Heading>More links</Heading>
-                <Subheading>Check out my other creations 😁</Subheading>
-                <SubContainer>
-                    <Content href="">Deals.me</Content>
-                    <Content href="">Hermes</Content>
-                </SubContainer>
-            </Column>
+                <Column>
+                    <Heading>More links</Heading>
+                    <Subheading>Check out my other creations 😁</Subheading>
+                    <SubContainer>
+                        <Content href="">Deals.me</Content>
+                        <Content href="">Hermes</Content>
+                    </SubContainer>
+                </Column>
 
-            <Column>
-                <Heading>Socials</Heading>
-                <Subheading>I'm lookin' for internships 😉</Subheading>
-                <SubContainer>
-                    <Content href="">LinkedIn</Content>
-                    <Content href="">Instagram</Content>
-                    <Content href="">Twitter</Content>
-                    <Content href="">Github</Content>
-                    <Content href="">Email</Content>
-                </SubContainer>
-            </Column>
-        </Wrapper>
-        <Marker>prathik {new Date().getFullYear()}</Marker>
-        </>
+                <Column>
+                    <Heading>Socials</Heading>
+                    <Subheading>I'm lookin' for internships 😉</Subheading>
+                    <SubContainer>
+                        <Content href="">LinkedIn</Content>
+                        <Content href="">Instagram</Content>
+                        <Content href="">Twitter</Content>
+                        <Content href="">Github</Content>
+                        <Content href="">Email</Content>
+                    </SubContainer>
+                </Column>
+            </Wrapper>
+            <Marker>prathik {new Date().getFullYear()}</Marker>
+        </div>
     );
 }
 

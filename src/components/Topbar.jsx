@@ -7,9 +7,9 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px 50px;
+    padding: 5px 50px;
     @media(max-width: 600px) {
-        padding: 15px;
+        padding: 5px;
     }
     filter: drop-shadow(0 0 0.75rem #06040B);
     margin-bottom: 40px;
@@ -26,6 +26,7 @@ const Right = styled.a`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Pacifico', cursive;
+    text-decoration: none;
 `;
 
 const Middle = styled.section`

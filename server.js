@@ -9,7 +9,8 @@ const http = require("http");
 const cors = require("cors")
 const cookieParser = require("cookie-parser");
 
-const { authRouter } = require("./server/routes/auth.routes.js");
+const { authRouter } = require("./server/routes/auth.routes");
+const { searchRouter } = require("./server/routes/search.routes");
 
 const app = express();
 const server = http.createServer(app);
@@ -24,6 +25,7 @@ app.use(express.static(path.join(__dirname, ".", "public")))
     .use(cookieParser());
 
 app.use("/auth", authRouter);
+app.use("/search", searchRouter);
 
 app.use((req, res, next) => {
     res.sendFile(path.join(__dirname, ".", "build"));
