@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-
 const Wrapper = styled.div`
     margin-top: 25px;
     display: flex;
@@ -57,7 +56,7 @@ const Marker = styled(Content)`
     color: #504966;
     padding: 0 50px;
     text-align: right;
-`
+`;
 
 const Donate = styled.a`
     font-weight: 700;

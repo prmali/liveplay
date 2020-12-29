@@ -9,7 +9,7 @@ let authRouter = express.Router();
 const SPOTIFY = {
     CLIENT_ID: process.env.SPOTIFY_CLIENT_ID,
     CLIENT_SECRET: process.env.SPOTIFY_CLIENT_SECRET,
-    REDIRECT_URI: "http://localhost:3000/auth/spotify/callback",
+    REDIRECT_URI: "http://192.168.86.82:3000/auth/spotify/callback", // "http://localhost:3000/auth/spotify/callback"
     STATE: "spotify_auth_state",
 };
 
@@ -22,7 +22,8 @@ authRouter.get("/spotify", async(req, res) => {
             client_id: SPOTIFY.CLIENT_ID,
             response_type: "code",
             redirect_uri: SPOTIFY.REDIRECT_URI,
-            state: currState
+            state: currState,
+            scope: "user-library-read playlist-read-collaborative playlist-read-private",
         }));
 });
 

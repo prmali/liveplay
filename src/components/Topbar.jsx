@@ -8,10 +8,10 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     padding: 5px 50px;
-    @media(max-width: 600px) {
+    @media (max-width: 600px) {
         padding: 5px;
     }
-    filter: drop-shadow(0 0 0.75rem #06040B);
+    filter: drop-shadow(0 0 0.75rem #06040b);
     margin-bottom: 40px;
 `;
 
@@ -22,10 +22,15 @@ const Right = styled.a`
     padding: 5px 0;
     font-size: 1.75em;
     font-weight: 700;
-    background: -webkit-linear-gradient(20deg, #fc604d 0%, #f23180 50%, #c229b1 100%);
+    background: -webkit-linear-gradient(
+        20deg,
+        #fc604d 0%,
+        #f23180 50%,
+        #c229b1 100%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: 'Pacifico', cursive;
+    font-family: "Pacifico", cursive;
     text-decoration: none;
 `;
 
@@ -47,8 +52,13 @@ const Button = styled.a`
 `;
 
 const FilledButton = styled(Button)`
-    color: white;  
-    background: -webkit-linear-gradient(20deg, #fc604d 0%, #f23180 50%, #c229b1 100%);
+    color: white;
+    background: -webkit-linear-gradient(
+        20deg,
+        #fc604d 0%,
+        #f23180 50%,
+        #c229b1 100%
+    );
     filter: drop-shadow(0 0 0.75rem #e62097);
 `;
 
@@ -65,4 +75,4 @@ function Topbar(props) {
     );
 }
 
-export default Topbar
+export default Topbar;
