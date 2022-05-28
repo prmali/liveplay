@@ -1,0 +1,26 @@
+enum Permissions {
+    OWNER_ONLY
+    ADMINS_ONLY
+    EVERYONE
+}
+
+type Settings {
+    canQueue: Permissions
+    canChat: Permissions
+}
+
+type Room {
+    owner: String
+    listenerCount: Number
+    admins: [String]
+    listeners: [String]
+    musicLog: [String]
+    actionLog: [String]
+    settings; Settings
+    createdAt: Date,
+}
+
+schema {
+    query: Room
+    
+}

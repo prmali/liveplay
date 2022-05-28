@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import axios from "axios";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Cookies from "universal-cookie";
 import qs from "querystring";
-import fs from "fs";
+
+import { authorize } from "../redux/actions/root.action";
 
 const cookies = new Cookies();
 
@@ -172,6 +173,7 @@ const getSongs = (
 
 function Profile(props) {
 	const userObj = useSelector((state) => state);
+
 	const [playlists, setPlaylists] = useState([]);
 	const [playlist, setPlaylist] = useState(null);
 	const [tracks, setTracks] = useState([]);
@@ -225,7 +227,6 @@ function Profile(props) {
 						})
 						.then((res) => {
 							let temp = {};
-							console.log(res.data.items);
 							setTracks(res.data.items);
 						})
 						.catch((err) => {
